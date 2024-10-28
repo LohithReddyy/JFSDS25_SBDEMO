@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 @org.springframework.stereotype.Controller
 public class Controller {
@@ -18,7 +17,7 @@ public class Controller {
     }
 
     @PostMapping("/submitForm")
-    @ResponseBody
+    
     public String submitForm(@RequestParam("name") String name, @RequestParam("mobileNumber") String mobileNumber,Model model) {
         model.addAttribute("name", name);
         model.addAttribute("mobileNumber", mobileNumber);
